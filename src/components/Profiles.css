@@ -1,0 +1,16 @@
+#profile .flex {
+  display: flex;
+  justify-content: space-between;
+  gap: 3em;
+  text-align: left;
+  margin-bottom: 0;
+}
+
+#profile .flex .info {
+  padding: 1em;
+}
+
+#profile .flex .item {
+  margin-left: 2em;
+  margin-right: 2em;
+}
