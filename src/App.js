@@ -2,8 +2,8 @@ import './App.css';
 import React, { useEffect, useState } from "react";
 import Profiles from "./components/Profiles";
 
-const apiRed = "https://tybbit-backend.onrender.com/get"
-const apiBlue = "https://tybbit-backend.onrender.com/get"
+const apiRed = "https://tybbit-backend.onrender.com/get/red"
+const apiBlue = "https://tybbit-backend.onrender.com/get/blue"
 
 export default function App() {
   const [usersRed, setUsersRed] = useState([]);
