@@ -11,3 +11,8 @@
 *>* {
   font-family: "Poppins", cursive;
 }
+
+.App-profiles {
+  display: flex;
+  flex-direction: row;
+}

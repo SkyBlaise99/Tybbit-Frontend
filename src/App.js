@@ -2,24 +2,33 @@ import './App.css';
 import React, { useEffect, useState } from "react";
 import Profiles from "./components/Profiles";
 
-const api = "https://tybbit-backend.onrender.com/get"
+const apiRed = "https://tybbit-backend.onrender.com/get"
+const apiBlue = "https://tybbit-backend.onrender.com/get"
 
 export default function App() {
-  const [users, setUsers] = useState([]);
+  const [usersRed, setUsersRed] = useState([]);
+  const [usersBlue, setUsersBlue] = useState([]);
 
-  const fetchData = () => {
+  const fetchData = (api, func) => {
     return fetch(api)
       .then((response) => response.json())
-      .then((data) => setUsers(data));
+      .then((data) => func(data));
   }
 
-  useEffect(() => { fetchData(); }, [])
+  useEffect(() => {
+    fetchData(apiRed, setUsersRed);
+    fetchData(apiBlue, setUsersBlue);
+  }, [])
 
   return (
     <div>
       <header className="App-header">
         <h1>Leaderboard</h1>
-        <Profiles users={users}></Profiles>
+        <div className="App-profiles">
+          <Profiles users={usersRed} color="#ED939D"></Profiles>
+          <p />
+          <Profiles users={usersBlue} color="#93CAED"></Profiles>
+        </div>
       </header>
     </div>
   );

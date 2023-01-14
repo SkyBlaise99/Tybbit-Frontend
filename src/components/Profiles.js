@@ -1,8 +1,8 @@
 import './Profiles.css';
 
-export default function Profiles({ users }) {
+export default function Profiles({ users, color }) {
   return (
-    <div id="profile">
+    <div id="profile" style={{ backgroundColor: color }}>
       <div className="flex">
         <div className="info">
           <h3 className='name'>Rank</h3>
