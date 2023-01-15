@@ -1,8 +1,9 @@
 import './Profiles.css';
 
-export default function Profiles({ users, color }) {
+export default function Profiles({ users, color, isRed }) {
   return (
     <div id="profile" style={{ backgroundColor: color }}>
+      <h2 className='title'>{ isRed ? "Mislabeled" : "Jumbled" }</h2>
       <div className="flex">
         <div className="info">
           <h3 className='name'>Rank</h3>

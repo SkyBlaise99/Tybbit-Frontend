@@ -25,9 +25,8 @@ export default function App() {
       <header className="App-header">
         <h1>Leaderboard</h1>
         <div className="App-profiles">
-          <Profiles users={usersRed} color="#ED939D"></Profiles>
-          <p />
-          <Profiles users={usersBlue} color="#93CAED"></Profiles>
+          <Profiles users={usersRed} color="#ED939D" isRed={true}></Profiles>
+          <Profiles users={usersBlue} color="#93CAED" isRed={false}></Profiles>
         </div>
       </header>
     </div>
