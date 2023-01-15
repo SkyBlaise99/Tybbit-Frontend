@@ -3,7 +3,7 @@ import './Profiles.css';
 export default function Profiles({ users, color, isRed }) {
   return (
     <div id="profile" style={{ paddingBottom: "1em", backgroundColor: color }}>
-      <h2 className='title'>{ isRed ? "Mislabeled" : "Jumbled" }</h2>
+      <h2 className='title'>{isRed ? "Mislabeled" : "Jumbled"}</h2>
       <div className="flex">
         <div className="info">
           <h3 className='name'>Rank</h3>
